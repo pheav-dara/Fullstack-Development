@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Add Element</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  </head>
+  <body>
+    <h1>Add New HTML Content</h1>
+    <p>We will look at four jQuery methods that are used to add new content</p>
+    <ul>
+      <li>append() - Inserts content at the end of the selected elements</li>
+      <li>
+        prepend() - Inserts content at the beginning of the selected elements
+      </li>
+      <li>after() - Inserts content after the selected elements</li>
+      <li>before() - Inserts content before the selected elements</li>
+    </ul>
+
+    <p class="p">This is paragraph</p>
+    <p class="p">This is another paragraph</p>
+
+    <ol>
+      <li>List Item 1</li>
+      <li>List Item 2</li>
+      <li>List Item 3</li>
+    </ol>
+
+    <button id="btn1">Prepend text</button>
+    <button id="btn2">Prepend list item</button>
+
+    <h1>Add Serveral New Elements With append() & prepend()</h1>
+    <p>This is a paragraph</p>
+    <button onclick="appendText()">Append text</button><br><br>
+
+    <!--After & Before-->
+    <img src="../Assets/images/jQuery3.png" id="img" height="140" width="100" alt="jQuery"><br>
+    <button id="beforeBtn">Insert before</button>
+    <button id="afterBtn">Insert after</button>
+
+
+    <script>
+      $(document).ready(function () {
+        $('#btn1').click(function () {
+          $('.p').prepend('<b>Prepended text</b>');
+        });
+        $('#btn2').click(function () {
+          $('ol').prepend('<li>Prepended item</li>');
+        });
+
+        // before() & after()
+        $("#beforeBtn").click(function(){
+            $("#img").before("<b>Before</b>");
+        })
+        $("#afterBtn").click(function(){
+            $("#img").after("<i>After</i>")
+        })
+      });
+      // Add Serveral
+      function appendText() {
+        var txt1 = '<p>Text.</p>'; // Create text with HTML
+        var txt2 = $('<p></p>').text('Text.'); // Create text with jQuery
+        var txt3 = document.createElement('p');
+        txt3.innerHTML = 'Text.'; // Create text with DOM
+        $('body').append(txt1, txt2, txt3); // Append new elements
+      }
+      $('button').click(function () {
+        console.log('clicked');
+      });
+    </script>
+  </body>
+</html>

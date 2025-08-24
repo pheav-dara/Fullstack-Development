@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get Content</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+</head>
+<body>
+    <h1>Learn About: text - html - val</h1>
+    <p id="text">This is a paragraph</p>
+    <p id="html">This is another paragraph</p>
+    <p>Input Field: <input type="text" id="test" value="Asurak"></p>
+    <button class="btn1">Set Text</button>
+    <button class="btn2">Set HTML</button>
+    <button class="btn3">Set Value</button>
+
+    <h1>Change Attribute</h1>
+    <p><a href="https://www.w3schools.com" title="some title" id="w3s">W3School</a></p>
+    <button class="changeBtn">Change href and title</button>
+    <button id="callbackBtn">Change href with callback</button>
+    <script>
+        $(document).ready(function(){
+            $(".btn1").click(function(){
+                $("#text").text("Hello World");
+            })
+            $(".btn2").click(function(){
+                $("#html").html("<p>Hello World</p>")
+            })
+            $(".btn3").click(function(){
+                $("#test").val("Hello World");
+            })
+
+            // Change Attribute
+            $(".changeBtn").click(function(){
+                $("#w3s").attr({
+                    "href": "https://www.w3schools.com/jquery/",
+                    "title" : "W3Schools jQuery Tutorial",
+                });
+                $("#w3s").text("W3school jQuery")
+            });
+            $("#callbackBtn").click(function(){
+                $("#w3s").attr("href", function(i, origValue){
+                    return origValue + "/jquery/";
+                });
+                 $("#w3s").text("W3school jQuery")
+            })
+        });
+    </script>
+</body>
+</html>
