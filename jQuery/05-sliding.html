@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sliding</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    
+    <style>
+        li{
+            color: red;
+        }
+        .syntax{
+            padding: 8px;
+            border: solid 1px gainsboro;
+        }
+        #panel, #flip{
+            padding: 5px;
+            text-align: center;
+            background-color: rgb(118, 243, 128);
+            border: solid 1px #c3c3c3;
+        }
+        #panel{
+            padding: 50px;
+            
+        }
+    </style>
+</head>
+<body>
+    <h1>jQuery Sliding Methods</h1>
+    <p>jQuery has the following slide methods:</p>
+    <ul>
+        <li>slideDown()</li>
+        <li>slideUp()</li>
+        <li>slideToggle</li>
+    </ul>
+    <p class="syntax">$(selector).slideDown(speed,callback);</p>
+
+    <div id="flip">Click to slide down panel</div>
+    <div id="panel">Hello World!</div>
+
+    <script>
+        $(document).ready(function(){
+            $('#flip').click(function(){
+                $("#panel").slideToggle(1000);
+            })
+        })
+    </script>
+</body>
+</html>
