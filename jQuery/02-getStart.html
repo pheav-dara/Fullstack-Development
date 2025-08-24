@@ -8,14 +8,32 @@
 </head>
 <body>
     <h1>Select in jQuery</h1>
+    <p>Here are some common DOM event</p>
+    <ol>
+        <li>click/li>
+        <li>dbclick</li>
+        <li>mouseenter</li>
+        <li>mouseleave</li>
+    </ol>
     <p class="hide">This is will hide when button is click</p>
     <button>Hide</button>
     <script>
         $(document).ready(function(){
-            $("button").click(function(){
-                $(".hide").hide();
+            // $("button").click(function(){
+            //     $(".hide").hide();
+            // })
+
+            // dbclick
+            $('button').dblclick(function(){
+                alert("You are double click on button");
+            })
+
+            // mouseenter()
+            $("button").mouseenter(function(){
+                alert("You entered p1!");
             })
         })
-    </script>
+
+</script>
 </body>
 </html>
