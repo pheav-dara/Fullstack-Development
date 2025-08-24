@@ -10,13 +10,19 @@
     <h1>Select in jQuery</h1>
     <p>Here are some common DOM event</p>
     <ol>
-        <li>click/li>
+        <li>click</li>
         <li>dbclick</li>
         <li>mouseenter</li>
         <li>mouseleave</li>
     </ol>
     <p class="hide">This is will hide when button is click</p>
     <button>Hide</button>
+    <button class="leave">Don't leave here</button>
+
+    <br>
+    <p class="mousedown">Mouse Down</p>
+    Name: <input type="text" name="fullname">
+    Email: <input type="text" name="email">
     <script>
         $(document).ready(function(){
             // $("button").click(function(){
@@ -32,6 +38,25 @@
             $("button").mouseenter(function(){
                 alert("You entered p1!");
             })
+
+            // mouseleave
+            $(".leave").mouseleave(function(){
+                alert("Bye! You now leave me!")
+            })
+
+            // mousedown
+            $('.mousedown').mousedown(function(){
+                alert("Mouse down over p1!");
+            })
+
+            // focus
+            $("input").focus(function(){
+                $(this).css("background-color", "yellow");
+            })
+            $("input").blur(function(){
+                $(this).css("background-color", "green");
+            })
+
         })
 
 </script>
