@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Add Element</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  </head>
+  <body>
+    <h1>jQuery - Remove Elements</h1>
+    <h2>Remove Elements/Content</h2>
+    <p>To remove elements and content, there are mainly two jQuery methods:</p>
+    <ul>
+        <li>remove() - Removes the selected element (and its child elements)</li>
+        <li>empty() - Removes the child elements from the selected element</li>
+    </ul>
+
+    <div style="width: 300px; height: 80px; padding: 10px; background-color: rgb(204, 204, 47);">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus quasi voluptatum explicabo beatae nobis optio?</p>
+    </div><br>
+    <button class="removeBtn">Remove</button>
+    <button class="emptyBtn">Empty</button>
+
+
+    <script>
+      $(document).ready(function () {
+        $(".removeBtn").click(function(){
+            $("div").remove()
+        })
+        $(".emptyBtn").click(function(){
+            $("div").empty()
+        })
+      });
+    </script>
+  </body>
+</html>

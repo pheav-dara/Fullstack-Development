@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>jQuery Methods List</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f4f4f4;
+      padding: 40px;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: auto;
+      background: #fff;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+      text-align: center;
+      color: #333;
+      margin-bottom: 20px;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    li {
+      background: #e0f7fa;
+      margin-bottom: 15px;
+      padding: 15px;
+      border-left: 6px solid #00796b;
+      border-radius: 5px;
+    }
+
+    li strong {
+      display: block;
+      font-size: 1.1em;
+      color: #00796b;
+      margin-bottom: 5px;
+    }
+
+    li span {
+      color: #555;
+    }
+    .important{
+        color: red;
+    }
+    .blue-border{
+        border-left: solid 6px red;
+    }
+    .list-background{
+        background: rgb(240, 214, 214);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>jQuery Style Methods</h2>
+    <ul>
+      <li>
+        <strong>addClass()</strong>
+        <span>Adds one or more CSS classes to the selected elements.</span>
+      </li>
+      <li>
+        <strong>removeClass()</strong>
+        <span>Removes one or more CSS classes from the selected elements.</span>
+      </li>
+      <li>
+        <strong>toggleClass()</strong>
+        <span>Toggles between adding and removing CSS classes on the selected elements.</span>
+      </li>
+      <li>
+        <strong>css()</strong>
+        <span>Sets or retrieves the style properties of the selected elements.</span>
+      </li>
+    </ul>
+    <button style="padding: 12px 18px; border: none; border-radius: 6px; background-color: rgb(47, 196, 216); cursor: pointer;">Add Classes to elements</button>
+    <button style="padding: 12px 18px; border: none; border-radius: 6px; background-color: rgb(209, 87, 57); cursor: pointer;">Remove Classes to elements</button>
+  </div>
+  
+
+  <script>
+    $(document).ready(function(){
+        // toggleClass
+        $("button").click(function(){
+            $("strong, li").toggleClass("important");
+            $("li").toggleClass("blue-border");
+            $("li").toggleClass("list-background");
+        });
+        // removeClass
+        $("removeBtn").click(function(){
+            $("strong, li").removeClass("important");
+            $("li").removeClass("blue-border");
+            $("li").removeClass("list-background");
+        })
+    })
+  </script>
+</body>
+</html>

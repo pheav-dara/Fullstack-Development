@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hide & Show</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <style>
+        .siblings * {
+            display: block;
+            border: 2px solid lightgray;
+            color: lightgray;
+            padding: 15px;
+            margin: 15px;
+        }
+    </style>
+  </head>
+  <body>
+    <h1>Traversing Sideways in the DOM tree</h1>
+    <p>
+      There are many useful jQuery methods for traversing sideways in the DOM
+      tree
+    </p>
+    <ul>
+      <li>siblings()</li>
+      <li>next()</li>
+      <li>nextAll()</li>
+      <li>nextUntil()</li>
+      <li>prev()</li>
+      <li>prevAll()</li>
+      <li>prevUntil()</li>
+    </ul>
+    <div class="siblings">
+      <div>
+        div (parent)
+        <p>p</p>
+        <span>span</span>
+        <h2>h2</h2>
+        <h3>h3</h3>
+        <h4>h4</h4>
+        <h5>h5</h5>
+        <h6>h6</h6>
+        <p>p</p>
+      </div>
+    </div>
+    <script>
+      $(document).ready(function () {
+        // $("h2").siblings("h3").css({
+        //     'color': 'red',
+        //     'border': '2px solid red'
+        // });
+
+        // $("h2").next().css({
+        //     'color': 'red',
+        //     'border': '2px solid red'
+        // });
+
+        // $("h2").nextAll().css({
+        //     'color': 'red',
+        //     'border': '2px solid red'
+        // });
+
+        // $("h2").nextUntil("h6").css({
+        //     'color': 'red',
+        //     'border': '2px solid red'
+        // });
+
+        // $("h2").prev().css({
+        //     'color': 'red',
+        //     'border': '2px solid red'
+        // });
+
+        // $("h2").prevAll().css({
+        //     'color': 'red',
+        //     'border': '2px solid red'
+        // });
+
+        $("h6").prevUntil("p").css({
+            'color': 'red',
+            'border': '2px solid red'
+        });
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GET vs POST with jQuery</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+    button {
+      margin: 10px 0;
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    #result {
+      margin-top: 20px;
+      padding: 10px;
+      border: 1px solid #ccc;
+      background-color: #f9f9f9;
+    }
+  </style>
+</head>
+<body>
+  <h1>HTTP Request: GET vs POST</h1>
+  <p>
+    Two commonly used methods for a request-response between a client and server are: GET and POST.
+  </p>
+  <ul>
+    <li><strong>GET</strong> - Requests data from a specified resource</li>
+    <li><strong>POST</strong> - Submits data to be processed to a specified resource</li>
+  </ul>
+
+  <button id="getBtn">Send GET Request</button>
+  <button id="postBtn">Send POST Request</button>
+
+  <div id="result">Response will appear here...</div>
+
+  <script>
+    $(document).ready(function () {
+      // GET Request
+      $('#getBtn').click(function () {
+        $.get('demo_test.asp', function (data, status) {
+          $('#result').html("<strong>GET Response:</strong><br>" + data);
+          alert('GET Status: ' + status);
+        });
+      });
+
+      // POST Request
+      $('#postBtn').click(function () {
+        $.post('demo_test_post.asp',
+          {
+            name: "Asurak",
+            city: "Phnom Penh"
+          },
+          function (data, status) {
+            $('#result').html("<strong>POST Response:</strong><br>" + data);
+            alert('POST Status: ' + status);
+          }
+        );
+      });
+    });
+  </script>
+</body>
+</html>

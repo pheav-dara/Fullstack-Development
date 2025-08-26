@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AJAX load() method</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <style>
+        .syntax{
+            padding: 6px;
+            border: 1px solid lightgray;
+        }
+    </style>
+</head>
+<body>
+    <h1>jQuery load() method</h1>
+    <h3>Syntax</h3>
+    <p class="syntax">$(selector).load(URL,data,callback);</p>
+    <h3>The optional Callback function to run when the load() method is completed.</h3>
+    <ul>
+        <li><span style="color:  red; background-color: #f5f5f5; border-radius: 2px; padding: 2px;">responseTxt</span> - contains the resulting content if the call succeeds.</li>
+        <li><span style="color:  red; background-color: #f5f5f5; border-radius: 2px; padding: 2px;">statusTxt</span> - contains the status of the call</li>
+        <li><span style="color:  red; background-color: #f5f5f5; border-radius: 2px; padding: 2px;">xhr</span> - contains the XMLHttpRequest object</li>
+    </ul>
+
+    <div id="div1"><h2>Let jQuery AJAX Change This Text</h2></div>
+    <button>Get External Content</button>
+    <script>
+        $(document).ready(function () {
+            $("button").click(function(){
+                $("#div1").load("demo_test.txt ", function(responseTxt, statusTxt, xhr){
+                    if(statusTxt == "success"){
+                        alert("External content loaded successfully.");
+                    }
+                    if(statusTxt == "error"){
+                        alert("Error: " + xhr.status + ":" + xhr.statusText);
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

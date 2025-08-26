@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Filtering</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <style>
+       
+    </style>
+  </head>
+  <body>
+    <h1>Traversing Sideways in the DOM tree</h1>
+    <p>
+      The most basic filtering methods are
+    </p>
+    <ul>
+      <li>first()</li>
+      <li>last()</li>
+      <li>eq()</li>
+      <li>filter()</li>
+      <li>not()</li>
+    </ul>
+    
+    <!-- HTML  -->
+     <h1>Welcome to my Homepage</h1>
+     <p>Thisis a paragraph</p>
+
+     <div style="border: 1px solid black;">
+        <p>A paragraph in a div.</p>
+        <p>Another paragraph in a div.</p>
+     </div>
+     <br>
+     <div style="border: 1px solid black;">
+        <p>A paragraph in a div.</p>
+        <p>Another paragraph in a div.</p>
+     </div>
+     <br>
+     <div style="border: 1px solid black;" class="intro">
+        <p>A paragraph in a div.</p>
+        <p>Another paragraph in a div.</p>
+     </div>
+     <br>
+
+     <div style="border: 1px solid black;" id="intro">
+        <p>A paragraph in a div.</p>
+        <p>Another paragraph in a div.</p>
+     </div>
+     <br>
+
+ 
+
+     
+
+    <script>
+      $(document).ready(function () {
+        // $('div').first().css('background-color', 'yellow');
+        // $('div').last().css('background-color', 'yellow');
+        // $('div').eq(0).css('background-color', 'yellow');
+        // $('div').filter('#intro').css('background-color', 'yellow');
+        $('div').not('#intro').css('background-color', 'red');
+
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>jQuery Dimension Practice</title>
+    <style>
+      #box {
+        width: 200px;
+        height: 100px;
+        padding: 20px;
+        border: 5px solid #333;
+        margin: 10px;
+        background-color: lightblue;
+      }
+      button {
+        margin: 5px;
+      }
+      #output {
+        margin-top: 20px;
+        padding: 10px;
+        background-color: #f0f0f0;
+        border: 1px solid #ccc;
+        font-family: monospace;
+      }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        function showResult(label, value) {
+          $("#output").html(`<strong>${label}:</strong> ${value}px`);
+        }
+
+        $("#getWidth").click(function () {
+          showResult("Width", $("#box").width());
+        });
+
+        $("#getHeight").click(function () {
+          showResult("Height", $("#box").height());
+        });
+
+        $("#getInnerWidth").click(function () {
+          showResult("Inner Width", $("#box").innerWidth());
+        });
+
+        $("#getInnerHeight").click(function () {
+          showResult("Inner Height", $("#box").innerHeight());
+        });
+
+        $("#getOuterWidth").click(function () {
+          showResult("Outer Width", $("#box").outerWidth());
+        });
+
+        $("#getOuterHeight").click(function () {
+          showResult("Outer Height", $("#box").outerHeight());
+        });
+
+        $("#getOuterWidthMargin").click(function () {
+          showResult("Outer Width (with margin)", $("#box").outerWidth(true));
+        });
+
+        $("#getOuterHeightMargin").click(function () {
+          showResult("Outer Height (with margin)", $("#box").outerHeight(true));
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <h1>jQuery Dimension Methods Practice</h1>
+    <div id="box">This is a box</div>
+
+    <button id="getWidth">Get Width</button>
+    <button id="getHeight">Get Height</button>
+    <button id="getInnerWidth">Get Inner Width</button>
+    <button id="getInnerHeight">Get Inner Height</button>
+    <button id="getOuterWidth">Get Outer Width</button>
+    <button id="getOuterHeight">Get Outer Height</button>
+    <button id="getOuterWidthMargin">Get Outer Width (with margin)</button>
+    <button id="getOuterHeightMargin">Get Outer Height (with margin)</button>
+
+    <div id="output">Click a button to see the dimension value here.</div>
+  </body>
+</html>
