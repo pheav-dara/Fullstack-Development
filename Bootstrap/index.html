@@ -5,12 +5,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Boostrap</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </head>
-<body>
+<body class="container">
     <h1>This is a column in bootsrap there 12 column</h1>
-    <div class="col-xl-4 col-dm-6 col-sm-12">h1</div>
-    <div class="col-xl-4 col-dm-6 col-sm-12">h1</div>
-    <div class="col-xl-4 col-dm-6 col-sm-12">h1</div>
-    <div class="col-xl-4 col-dm-6 col-sm-12">h1</div>
+    <div class="col-xl-4 col-dm-6 col-sm-12 bg-primary p-2 my-1 text-white">h1</div>
+    <div class="col-xl-4 col-dm-6 col-sm-12 bg-primary p-2 my-1 text-white">h1</div>
+    <div class="col-xl-4 col-dm-6 col-sm-12 bg-primary p-2 my-1 text-white">h1</div>
+    <div class="col-xl-4 col-dm-6 col-sm-12 bg-primary p-2 my-1 text-white">h1</div>
+
+    <h1>Image - Rounded </h1>
+    <img src="..\Assets\images\car.jpg" alt="" class="rounded col-lg-4 col-dm-1" width="400">
+    <img src="..\Assets\images\car.jpg" alt="" class="rounded-circle mx-1 col-lg-4 col-dm-1" width="400">
+    <img src="..\Assets\images\car.jpg" alt="" class="img-thumbnail mt-2 col-lg-4 col-dm-1" width="400">
+
+    <h1 class="mt-5">Jumbotron</h1>
+    <div class=" p-5 bg-primary text-white rounded">
+        <h1>Jumbotron</h1>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+            Corporis, sit! Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+            Corrupti, beatae!
+        </p>
+    </div>
+
+    <h1 class="mt-5">Alert</h1>
+    <div class="alert alert-danger alert-dismissible fade show">
+        <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+        <strong>Fail!</strong> please check your connection
+    </div>
+    <div class="alert alert-success alert-dismissible fade show">
+        <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+        <strong>success!</strong> please check your connection
+    </div>
+    <div class="alert alert-warning alert-dismissible fade show">
+        <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+        <strong>warning!</strong> please check your connection
+    </div>
 </body>
 </html>
