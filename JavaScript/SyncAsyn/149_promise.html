@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Promise</title>
+  </head>
+  <body>
+    <button type="submit">Click</button>
+    <script>
+      const button = document.querySelector("button")
+      button.addEventListener("click", function(){
+        alert("HI")
+      })
+      // constructure function  
+      const promise = new Promise((resolve, reject) => {
+        const data = ["dara", "pisey"];
+        if(data.length > 0){
+          resolve(data)
+        } else{
+          reject("There's no data")
+        }      
+      });
+      promise.then((data) => {
+        console.log(data)
+      })
+      .catch((err) => console.log(err))
+      
+    </script>
+  </body>
+</html>

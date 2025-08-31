@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Method Prototype</title>
+  </head>
+  <body>
+    <script>
+      // Method Prototype
+      // create function
+      // store function in the prototype
+      // create properties
+      // use deposit or drawal
+
+      function BankAccount(name, initBalance) {
+        this.name = name;
+        this.balance = initBalance;
+      }
+      BankAccount.prototype.deposit = function (amount) {
+        this.balance += amount;
+      };
+      BankAccount.prototype.withDrawal = function (amount) {
+        this.balance -= amount;
+      };
+      
+
+      const user1 = new BankAccount("dara", 2000);
+      user1.deposit(200)
+      console.log(user1);
+    </script>
+  </body>
+</html>

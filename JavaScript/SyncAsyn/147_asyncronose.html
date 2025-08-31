@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Asycronose</title>
+  </head>
+  <body>
+    <script>
+      // asyn code ប្រសិនបើចង់ទៅយកទិន្នន័យពីAPI យើងត្រូវរងចាំ អញ្ចឹងហើយបានយើងគួរតែប្រើ asyncronose code
+      // example of setTimeout() setTimeout( funtion () { what we to show}, time)
+
+      console.log("ONE");
+      console.log("TWO");
+
+      // setTimeout (() =>  {
+      //   console.log("timing...")
+      // }, 300)
+
+      setTimeout(function () {
+        console.log("timing...");
+      }, 300);
+      // ធ្វើការដូចគ្នាជាមួួយ setTimeout ប៉ុន្តែវានឹងធ្វើម្ដងហើយម្ដងទៀតទៅតាមពេលវេលាដែលយើងកំណត់
+      setInterval(function (){
+        console.log("Counting");
+      }, 1000)
+
+      console.log("LAST");
+      //myVar = setTimeout(function, milliseconds);
+      //clearTimeout(myVar);
+    </script>
+  </body>
+</html>

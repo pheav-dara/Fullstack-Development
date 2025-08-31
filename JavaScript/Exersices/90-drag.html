@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: sans-serif;
+    }
+    
+    .box{
+      padding: 1.5rem 2rem;
+      width: 400px;
+      background-color: rgba(0, 128, 255, 0.4);
+      position: absolute;
+      top: 50px;
+      left: 20px;
+      border-radius: 15px;
+      border: 2.5px solid rgba(255, 255, 255, 0.1);
+      overflow: hidden;
+      backdrop-filter: blur(25px) saturate(1.5);
+      box-shadow: 5px 5px 15px 0 rgb(0, 0, 0, 0.2);
+      cursor: pointer;
+    }
+    .box::before{
+      content: "";
+      display: block;
+      height: 90%;
+      width: 10px;
+      border-radius: 25px;
+      background-color: rgba(255, 255, 255, 0.2);
+      position: absolute;
+      left:12px;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      box-shadow: 2px 0 15px 0 rgb(0, 0, 0, 0.3);
+      
+    }
+    .box > p{
+      font-weight: 100;
+      font-size: 1.2rem;
+      letter-spacing: 2px;
+      line-height: none;
+      opacity: 0.8;
+    }
+    .box:nth-child(2){
+      background-color: rgba(255, 162, 0, 0.4);
+      left: 400px;
+      top: 100px;
+    }
+    .box:nth-child(3){
+      background-color: rgba(255, 60, 30, 0.4);
+      left: 300px;
+      top: 300px;
+    }
+    .box:nth-child(4){
+      background-color: rgba(0, 255, 0, 0.4);
+      left: 150px;
+      top: 150px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="box">
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum, reiciendis.</p>
+    </div>
+    <div class="box">
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum, reiciendis.</p>
+    </div>
+    <div class="box">
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum, reiciendis.</p>
+    </div>
+    <div class="box">
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum, reiciendis.</p>
+    </div>
+  </div>
+
+
+
+  <script>
+    const boxes = document.querySelectorAll(".box");
+    let startX = 0;
+    let startY = 0;
+    let currentBox = undefined;
+    let index = 1;
+    boxes.forEach(function(box){
+      box.addEventListener("mousedown", function(e){
+        currentBox = e.currentTarget;
+        currentBox.style.zIndex = index;
+        index++;
+        
+        startX = e.clientX - box.offsetLeft;
+        startY = e.clientY - box.offsetTop;
+        console.log(startX)
+
+        document.addEventListener("mousemove", mouseMove);
+        document.addEventListener("mouseup", mouseUp);
+      });
+    });
+    function mouseMove(e){
+      currentBox.style.left = `${e.clientX - startX}px`;
+      currentBox.style.top = `${e.clientY - startY}px`;
+    };
+
+    function mouseUp(){
+      document.removeEventListener("mousemove", mouseMove)
+    }
+  </script>
+</body>
+</html>

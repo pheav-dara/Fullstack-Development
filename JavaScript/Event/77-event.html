@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    button{
+      border: none;
+      background-color: dodgerblue;
+      color: white;
+      width: 50%;
+      display: block;
+     
+      margin: 0 auto;
+      padding: 20px;
+      margin-top: 200px;
+    }
+  </style>
+</head>
+<body>
+  <button>Click</button>
+  <script>
+    // Event 
+    const btn = document.querySelector("button")
+    // Reference: declare an funtion and invoke it in the evenlistener without ()
+    function click(){
+      console.log("Reference Function");
+    }
+    btn.addEventListener("click", click); // reference
+
+    // call back function: using function in the method or in the function
+    btn.addEventListener("click", function(){ // callback Function
+      console.log("CallBack Function");
+    });
+  </script>
+</body>
+</html>

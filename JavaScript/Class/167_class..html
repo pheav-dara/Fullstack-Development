@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Class</title>
+</head>
+<body>
+  <script>
+    // អ្វីត្រូវបង្កើត 1. clas NameFunc => construtor(parameter)
+    class BankAccount {
+      constructor(name, initialBalance){
+        this.name = name;
+        this.balance = initialBalance;
+        this.bank = "ABA";
+      }
+      deposit(amount){
+        this.balance += amount
+      }
+      withDrawal(amount){
+        this.balance -= amount
+      }
+    }
+    const user1 = new BankAccount("Dara", 2000);
+
+    // deposit
+    user1.deposit(100)
+    console.log(user1)
+  </script>
+</body>
+</html>

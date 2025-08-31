@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+
+  <script>
+    // Promise & Async/Await --------------------
+
+    function performSong(){
+      return new Promise((resolve) => {
+        setTimeout(()=> {
+          console.log(`Sing ${name} song`)
+          resolve();
+        }, 500)
+      });
+    }
+
+    function liveConcert(){
+      console.log("Starting...");
+      performSong().then();
+      console.log(performSong);
+    }
+    liveConcert();
+  </script>
+</body>
+</html>

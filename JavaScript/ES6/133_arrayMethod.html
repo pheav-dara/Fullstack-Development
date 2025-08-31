@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+
+
+  <script>
+    const user = [
+      {name: "Menghoy", age: 25}, 
+      {name: "Sok", age: 21}, 
+      {name: "Dara", age: 20}, 
+    ]
+    // find() for check condition that find that have the array object
+    // findIndex () for check index of item
+    // every() for check all of the objects (true if have the same value false: if don't have the same value in the arrayObject)
+    // some() if true only one it will true
+    // includes("value", index) it check item in the array object
+    // fill() input what that you want to show. example, if you have an array that have 3 items and then you to fill what that you to show 
+              // like  ['a', 'a', 'a', 'a']
+              // you can use index for start and stop fill like fill("a", 0, 2) => ["a", "a", "a", "b", "d"]
+    // const findUser = user.some((u) => u.age === 20)
+    // console.log(findUser)
+    // const myArray = ["a", "b", "c", "d"];
+    // const filling = myArray.fill("a" , 0 ,2)  // includes("value", index)
+    // console.log(filling) 
+  //   const text = "reanmore";
+  //   function mapFunction(item){
+  //      return `<p>${item}</p>`
+  //   }
+  //   // if you use the arrow function can not call above the funciton
+  //   const myArray = Array.from(text, mapFunction);
+
+  //  console.log(myArray)
+
+  const obj = {0: "a", 1: "b" , length: 2} // ប្រសិនបើអត់់មិនមានlength ទេ​ វាអត់ដំណើរការទេ
+  const myArray = Array.from(obj)
+  console.log(myArray)
+  </script>
+</body>
+</html>

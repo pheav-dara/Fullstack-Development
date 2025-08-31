@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // Promise & Async/Await --------------------
+
+      const performSong = async (song, delay) => {
+        return new Promise((resolve,reject) => {
+          if(name && delay){
+            setTimeout(() => {
+            console.log(`Playing song ${song}`);
+            resolve();
+            }, delay);
+          }else{
+            reject("There's no song here!")
+          }
+        });
+      };
+
+      const liveConcert = async () => {
+        console.log("Starting...");
+        try{
+          await performSong("A", 1000);
+          await performSong("B");
+          await performSong("C", 3000);
+          console.log("Ending");
+        }catch(err){
+          console.log(err)
+        }
+      };
+
+      liveConcert();
+    </script>
+  </body>
+</html>

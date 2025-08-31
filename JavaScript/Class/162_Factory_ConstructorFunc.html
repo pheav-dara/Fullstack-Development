@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // Note:
+    // 1. factory object: return for object (return { key: value})
+    // 2. constructor object: use this keyword (this.key = value) and you need to use new keyword before invoke function 
+    // const obj = new functionName(parameter)
+    // Constructor ក៏មានជា function ស្រាប់ៗផងដែរ
+    
+    // const obj = new Object({id: 1, name: "Meng"}) // 
+    // console.log(obj)
+    // const obje = new Boolean(), new Number()
+
+
+    //const obj {} object ធម្មតា
+    function createMac (color, ram, ssd){
+      return {
+        color,
+        ram: ram + "GB",
+        ssd: ssd + "TB",
+      };
+    };
+    // it call: factory object function
+    const macOne = createMac("white", 16, 2);
+    const macTwo = createMac("Black", 32, 2);
+    console.log(macOne, macTwo)
+
+    // មួយវិញទៀតយើងជាប្រើ constructor function 
+    // function CreateMac(color,ram, ssd){
+    //   this.color = color;
+    //   this.ram = ram;
+      
+    // }
+    // constructor need to use "new" keyword
+    // new វាបង្កើតជា empty object
+    //const macOne = new CreateMac("BlacK", 16);
+    //ប្រសិនចង់ថែម object
+    //macOne.ssd = 2
+    //{} this it reference to this empty object
+    //console.log(macOne)
+</script>
+</body>
+</html>

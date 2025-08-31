@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+  
+  <script type="module">
+    // module គឺជាបំណែកណាមួួយនៃកូដ​​ យើងរក្សារទុកនៅfile ណាមួយដែលយើងអាច import or export ទៅប្រើនៅ​ file ផ្សេងៗបាន
+    // របៀប export មានពីរគឺ name export and default export
+    // name export យើងអាច export ប៉ុណ្នាក៏បានដែរ 
+    // default you can export only one module
+
+    import {userData, productData as ProData} from "./Data/data.js"
+    const filter = (users) => {
+      return users.filter(user => user.age === 20)
+    }
+    console.log(filter(userData))
+    console.log(ProData)
+  </script>
+</body>
+</html>

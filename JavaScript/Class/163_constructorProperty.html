@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+  <script>
+    // Note: constructor can't work with arrow function
+    // Every Object or Array there are constructor that call object constructor or array construtor
+   function CreateMac(color, ram, price){
+      this.color = color;
+      this.ram = ram;
+      this.price = price;
+    } ;
+    const macOne = new CreateMac("White", 16, "4k");
+    console.log(macOne)
+    const myMac = {};
+    console.log(myMac.constructor)
+    const arr = []
+    console.log(arr.constructor)
+  </script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <form action="">
+    <input type="text">
+    <input type="submit" value="submit">
+  </form>
+
+  <script>
+    // PreventDefault() -----
+    const form = document.querySelector("form");
+    form.addEventListener("submit", function(event){
+      event.preventDefault(); // សម្រាប់ចាប់វាកុំអោយលោតលទ្ធផលតែមួយភ្លែត
+      console.log(form.firstElementChild.value) // ចាប់យកទិន្នន័យដែលបានបញ្ចូល
+    })
+  </script>
+</body>
+</html>

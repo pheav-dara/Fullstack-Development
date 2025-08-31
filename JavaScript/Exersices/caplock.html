@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+     .container{
+      width: 800px;
+      border: 2px solid red;
+      margin: auto;
+      padding: 20px;
+      display: block;
+
+    }
+    .caplock{
+      color: red;
+      display: none;
+    }
+   
+  </style>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<body>
+  <div class="container">
+    <div class="caplock">Caplock is one</div>
+    <textarea name="" id="textArea"></textarea><br>
+    <button>Show & Hide</button>
+  </div>
+
+  <script>
+    const caplockOn = document.querySelector('.caplock');
+    const textArea = document.querySelector('textarea')
+    
+    // textArea.addEventListener("keyup", function(e) {
+    //   if (e.getModifierState("CapsLock")) {
+    //     caplockOn.style.display = "block"; // Show the message
+    //   } else {
+    //     caplockOn.style.display = "none"; // Hide the message
+    //   }
+    // });
+    $(document).ready(function(){
+      $('button').click(function(){
+        $(".caplock").toggle();
+      })
+    })
+    
+  </script>
+</body>
+</html>

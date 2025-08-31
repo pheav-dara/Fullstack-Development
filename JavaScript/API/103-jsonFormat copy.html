@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+
+  <script>
+    const address = ["PP", "KP", "KD"];
+    localStorage.setItem("name", "Pheav Dara");
+    localStorage.setItem("address", JSON.stringify(address)); // JSON.stringify convert array to string 
+    const addr = localStorage.getItem("address")
+    const result = JSON.parse(addr) // get as array or object
+    localStorage.setItem("age", "20");
+
+    
+   
+    console.log(result[0])
+  </script>
+</body>
+</html>

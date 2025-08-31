@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+  <script>
+    const smartPhone = ["iPhone", "Samsung", "LG", "OPPO", "Sony"];
+
+    const ul = document.createElement("ul")
+    // for loop
+    // for(let i = 0; i < smartPhone.length; i++){
+    //   const li = document.createElement("li")
+    //   li.textContent = smartPhone[i]
+    //   ul.appendChild(li);
+    // }
+    
+    // forEach
+    smartPhone.forEach(function(i){
+      const li = document.createElement("li");
+      li.textContent = i;
+      ul.appendChild(li)
+    })
+    document.body.appendChild(ul)
+    console.log(ul)
+  </script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Call Back Hell</title>
+  </head>
+  <body>
+    <script>
+      // This is callBack Hell 
+      function liveConcert() {
+        console.log("Start Concert");
+        setTimeout(() => {
+          console.log("Start First Song");
+          setTimeout(() => {
+            console.log("Second Song");
+            setTimeout(() => {
+              console.log("Third Song")
+              setTimeout(() => {
+                console.log("Last Song");
+                console.log("Ending...")
+              }, 2000)
+            }, 1500);
+          }, 500);
+        }, 1000);
+      }
+      liveConcert();
+    </script>
+  </body>
+</html>

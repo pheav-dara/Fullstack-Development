@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        font-family: sans-serif;
+        background-color: black;
+        color: rgb(163, 163, 163);
+      }
+      .container {
+        padding: 1rem;
+        display: grid; /* Change display to grid */
+        gap: 0.7rem;
+      }
+      @media screen and (min-width: 300px) {
+        .container {
+          padding: 1.5rem;
+          grid-template-columns: repeat(1, 1fr);
+        }
+      }
+
+      @media screen and (min-width: 768px) {
+        .container {
+          padding: 1.5rem;
+
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+
+      @media screen and (min-width: 1024px) {
+        .container {
+          grid-template-columns: repeat(3, 1fr);
+        }
+      }
+
+      .user {
+        background: linear-gradient(
+          to top left,
+          rgb(45, 40, 30),
+          rgb(33, 33, 33)
+        );
+        border-radius: 20px;
+        padding: 2.5rem 2rem;
+        border: 2px solid rgb(82, 82, 82);
+        transition: border 0.15s ease-in-out;
+      }
+      .user:hover {
+        border-color: rgb(149, 149, 149);
+      }
+      .user > h3 {
+        font-size: 2.2rem;
+        letter-spacing: 2px;
+        color: gold;
+        opacity: 0.9;
+      }
+      .user > p {
+        font-size: 1.5rem;
+      }
+      .user > p:nth-child(2) {
+        margin: 10px 0;
+      }
+    </style>
+  </head>
+  <body>
+    <section class="container">
+ 
+    </section>
+    <script>
+      // Exercises
+      const container = document.querySelector(".container");
+      const userData = [
+        {
+          name: "Pheav Dara",
+          age: 26,
+          email: "pheav.dara@gmail.com",
+        },
+        {
+          name: "Dara Pheav ",
+          age: 20,
+          email: "pheav.dara@gmail.com",
+        },
+        {
+          name: "Mean Socheata",
+          age: 22,
+          email: "mean.socheata@gmail.com",
+        },
+        {
+          name: "Sombo Sby",
+          age: 22,
+          email: "sombo.sby32@gmail.com",
+        },
+      ];
+      const users = userData.map(function(user){
+        return ` <article class="user">
+        <h3>${user.name}</h3>
+        <p>${user.age}</p>
+        <p>${user.email}</p>
+      </article>`
+      }).join("")
+      container.innerHTML = users
+      console.log(users);
+    </script>
+  </body>
+</html>

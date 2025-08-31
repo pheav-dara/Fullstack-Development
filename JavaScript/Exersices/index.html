@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hacker Themed Website</title>
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      /* Reset default browser styles */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        background-color: #000;
+        color: #0f0;
+        font-family: "Courier New", Courier, monospace;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .terminal {
+        background-color: #000;
+        border: 2px solid #0f0;
+        border-radius: 5px;
+        width: 80%;
+        max-width: 800px;
+        box-shadow: 0 0 20px #0f0;
+      }
+
+      .terminal-header {
+        display: flex;
+        align-items: center;
+        padding: 10px;
+        background-color: #111;
+        border-bottom: 2px solid #0f0;
+      }
+
+      .buttons {
+        display: flex;
+        gap: 8px;
+        margin-right: auto;
+      }
+
+      .button {
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        display: inline-block;
+      }
+
+      .close {
+        background-color: #ff5f56;
+      }
+
+      .minimize {
+        background-color: #ffbd2e;
+      }
+
+      .maximize {
+        background-color: #27c93f;
+      }
+
+      .terminal-title {
+        color: #0f0;
+        font-size: 14px;
+      }
+
+      .terminal-body {
+        padding: 20px;
+        min-height: 300px;
+        position: relative;
+        white-space: pre-wrap;
+        overflow: hidden;
+      }
+
+      .cursor {
+        display: inline-block;
+        background-color: #0f0;
+        width: 10px;
+        height: 18px;
+        animation: blink 1s steps(2, start) infinite;
+        position: absolute;
+      }
+
+      @keyframes blink {
+        to {
+          visibility: hidden;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="terminal">
+      <div class="terminal-header">
+        <div class="buttons">
+          <span class="button close"></span>
+          <span class="button minimize"></span>
+          <span class="button maximize"></span>
+        </div>
+        <span class="terminal-title">Terminal</span>
+      </div>
+      <div class="terminal-body">
+        <p id="output"></p>
+        <span class="cursor" id="cursor">|</span>
+      </div>
+    </div>
+
+    <script >
+            const outputElement = document.getElementById('output');
+      const cursor = document.getElementById('cursor');
+
+      const commands = [
+          "Initializing system...",
+          "Loading modules...",
+          "Access granted.",
+          "Welcome, User.",
+          "",
+          ">>> ls -la",
+          "total 12",
+          "drwxr-xr-x  5 user  staff   160 Oct 10 10:00 .",
+          "drwxr-xr-x  3 root  staff    96 Oct 10 09:50 ..",
+          "-rw-r--r--  1 user  staff    0 Oct 10 10:00 hacker_style.css",
+          "-rw-r--r--  1 user  staff    0 Oct 10 10:00 index.html",
+          "-rw-r--r--  1 user  staff    0 Oct 10 10:00 script.js",
+          "",
+          ">>> ./start.sh",
+          "Hacker website initialized successfully.",
+          ">>> "
+      ];
+
+      let currentCommand = 0;
+      let currentText = '';
+      let index = 0;
+      let typingSpeed = 50; // milliseconds
+
+      function typeNextCharacter() {
+          if (currentCommand < commands.length) {
+              const line = commands[currentCommand];
+              if (index < line.length) {
+                  currentText += line.charAt(index);
+                  outputElement.textContent = currentText;
+                  index++;
+                  setTimeout(typeNextCharacter, typingSpeed);
+              } else {
+                  currentText += '\n';
+                  outputElement.textContent = currentText;
+                  currentCommand++;
+                  index = 0;
+                  setTimeout(typeNextCharacter, 500);
+              }
+          } else {
+              // After all commands are typed, keep the cursor blinking
+              cursor.style.display = 'none';
+          }
+      }
+
+      window.onload = () => {
+          typeNextCharacter();
+      };
+    </script>
+  </body>
+</html>

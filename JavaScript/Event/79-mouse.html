@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    button{
+      border: none;
+      background-color: dodgerblue;
+      color: white;
+      width: 50%;
+      display: block;
+     
+      margin: 0 auto;
+      padding: 20px;
+      margin-top: 200px;
+    }
+    button:hover{
+      opacity: 0.5;
+    }
+  </style>
+</head>
+<body>
+  <button>click</button>
+
+
+  <script>
+    // click, dblclick, mousedown, mouseup, mouseleave, mouseout, mousemove, mouseenter
+    
+    const btn = document.querySelector("button")
+    btn.addEventListener('mouseleave', function(){
+      console.log("hi")
+    })
+  </script>
+</body>
+</html>

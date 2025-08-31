@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .container {
+      background-color: darkolivegreen;
+      color: white;
+      padding: 20px;
+    }
+    body{
+      height: 200px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Reanmore</h1>
+    <p>Lorem ipsum dolor sit amet.</p>
+    <button>Submite</button>
+  </div>
+
+
+  <script>
+    // Bubling Event
+
+    // ប្រសិនបើយើងចង់click តែទៅលើ element ណាមួយទេ​គេប្រើ event.stopPropagation();
+    const div = document.querySelector("div")
+    const h1 = document.querySelector("h1");
+    const p = document.querySelector("p");
+    const button = document.querySelector("button");
+    const body = document.querySelector("body")
+
+    
+    button.addEventListener("click", function(event){
+      event.stopPropagation();
+      console.log("button");
+    });
+    div.addEventListener("click", () => console.log("div"))
+    p.addEventListener("click", () => console.log("p"));
+    body.addEventListener("click", () => console.log("body"))
+    
+  </script>
+</body>
+</html>

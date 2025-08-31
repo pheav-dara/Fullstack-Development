@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button>Click</button>
+    <button>Close</button>
+    <button>Clear</button>
+    <script>
+      // ES6 --------------------------------------
+
+      // const friends = ["Sok", "Dara", "Socheat"];
+      // const oldFriends = ["Nang", "Chetra"];
+      // const bestFriends = ["Pitu", "Oukdom"];
+
+      // const allFriends = [...friends, ...oldFriends, ...bestFriends]
+      // console.log(allFriends)
+      // // ...Array: Select all value in array
+      // const cars = ["BMW", "Toyota", "Mecedess"];
+      // // For copy not references
+      // const myCar = cars;
+      // myCar[0] = "Ford"
+      // console.log(myCar, cars)
+
+      const buttons = document.querySelectorAll("button");
+      // querySelectAll return as noteList]
+      // for notelist we can not use with map method
+      // but if you want use with map method u need to copy by using ...buttons
+
+      const allBtn = [...buttons];
+      console.log(allBtn);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .container {
+        background-color: darkolivegreen;
+        color: white;
+        padding: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h3>reanmore</h3>
+      <p>Lorem ipsum dolor sit amet.</p>
+      <button class="btn">Click</button>
+    </div>
+    <script>
+      const container = document.querySelector(".container");
+
+      container.addEventListener("click", function (e) {
+        console.log(e.currentTarget);
+      });
+      // e.currentTarget = it show all of the container
+      container.addEventListener("click", function (e) {
+        console.log(e.target);
+      });
+      // e.target = it show the children in the container
+      // example if i click on button it will show button attribute
+      // and if i clicked on p it will show p attribute...
+    </script>
+  </body>
+</html>

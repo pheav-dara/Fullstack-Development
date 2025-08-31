@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const mapOject = new Map([
+        ["name", "Menghoy"],
+        ["age", 26],
+      ]);
+      // forEach use loop in array note: need to use value first key in the loop
+      // mapOject.forEach((value, key) => {
+      //   console.log(`${key} : ${value}`);
+      // });
+      // // for of loop use only in the map object
+      for(const [key, value] of mapOject){
+        console.log(`${key} : ${value}`)
+      }
+      
+    </script>
+  </body>
+</html>

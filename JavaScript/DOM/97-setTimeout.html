@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // setTimeout ------------------------
+
+    // reference 
+    const id = setTimeout(greating, 3000);
+    function greating(){
+      console.log("Hello world!")
+    }
+    // call back function 
+    setTimeout(function(){
+      console.log("Goca")
+    }, 1000);
+
+
+    // setInterval vea dom ner ka jea reang  rhot 
+    setInterval(function (){
+      console.log("HI")
+    }, 1000)
+
+    // reference function
+    setInterval(hello, 1000)
+    function hello(){
+      console.log("hello")
+    }
+
+    clearTimeout(id)
+  </script>
+</body>
+</html>

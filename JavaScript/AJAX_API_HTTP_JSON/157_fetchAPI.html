@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div></div>
+    <script>
+      // Fetch API -------------------------
+      const url = "https://jsonplaceholder.typicode.com/todos";
+      // fetch return as a promise
+
+      fetch(url)
+        .then((res) => res.json())
+        .then((data) => showing(data))
+        .catch((err) => console.log(err));
+      // how to get data from the promise u need to use var.then((d) => console.log(d))
+      
+      function showing(data) {
+        const div = document.querySelector("div")
+        div.innerHTML = data
+        .map(d => {
+          const {title: text} = d;
+          return `
+            <p>${text}</p>
+          `
+        }).join("");
+      }
+      
+    </script>
+  </body>
+</html>

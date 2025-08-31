@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+
+
+  <script>
+    // remove removeChild --------------------------
+
+    const span = document.createElement("span");
+    const div = document.createElement("div");
+    const button = document.createElement("button");
+    div.textContent = "div";
+    span.textContent = "span";
+    button.textContent = "Click"
+    document.body.append(div, button, span);
+    document.body.removeChild(button)
+
+    div.style.cssText = "color: blue; background-color:red"
+    // console
+    console.log(document.body)
+  </script>
+</body>
+</html>

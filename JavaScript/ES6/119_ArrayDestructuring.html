@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1></h1>
+
+    <script>
+      // Array destructuring សម្រាប់ប្រើហៅ
+      const h1 = document.querySelector("h1");
+      const phones = ["Nokida", "Iphone", "Samsung", "Pixel"];
+      const [phoneOne, , , pixel] = phones;
+      console.log(phoneOne, pixel);
+
+
+      function useState(){
+        const state = null;
+        function setState(){
+          console.log("Hello");
+        }
+        return [state, setState]
+      }
+      const [state, setState] = useState();
+      
+      // 1. Skip Items
+      // const array = [1, 2, 3];
+
+      // // Destructure values from the array
+      // const [a, b, c] = array;
+
+      // console.log(a); // Output: 1
+      // console.log(b); // Output: 2
+      // console.log(c); // Output: 3
+
+      // 2. Using Default Values
+      // const array = [1];
+
+      // const [a, b = 2] = array;
+
+      // console.log(a); // Output: 1
+      // console.log(b); // Output: 2 (default value)
+
+      // 3. Destructuring with Rest Operator
+      // const array = [1, 2, 3, 4, 5];
+
+      // const [first, second, ...rest] = array;
+
+      // console.log(first); // Output: 1
+      // console.log(second); // Output: 2
+      // console.log(rest); // Output: [3, 4, 5]
+
+      // let a = 1;
+      // let b = 2;
+
+      // [a, b] = [b, a];
+
+      // console.log(a); // Output: 2
+      // console.log(b); // Output: 1
+    </script>
+  </body>
+</html>

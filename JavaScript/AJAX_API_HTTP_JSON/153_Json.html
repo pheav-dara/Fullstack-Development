@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // API, AJAX, JSON, HTTP --------------------------------------
+      const users = [
+        {
+          name: "Pheav Dara",
+          age: 20,
+        },
+        {
+          name: "Sok Somnang",
+          age: 21,
+        },
+        {
+          name: "Pheav Chantrea",
+          age: 22,
+        },
+
+      ];
+      // JSON.stringify() convert from array or object json
+      const json = JSON.stringify(users);
+      // JSON.parse() convert from json string to array or object
+      const converted = JSON.parse(json)
+      // output: 
+      console.log(converted[0].name);
+    </script>
+  </body>
+</html>

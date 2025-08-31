@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+  <p></p>
+  <script>
+    // ES6 ------------------------------------------------------
+    // What I know 
+    // 1. Array Vs Set
+    // Set it return a unique value
+
+
+    // What I did, I want to get value that not have  the same value in the array
+    
+    // [] item BMW => ["BMW"],
+    // ["BMW"] itme => ["BMW", "Ford"],
+    // ["BMW", "Ford"] = > ["BMW", "Ford", "Mercesdes"]
+    // ["BMW", "Ford", "Mercesdes"] => ["BMW", "Ford", "Mercesdes"] មិនបញ្ចូល ["Ford"] មកទៀតទេដោយសារតែមាន Ford ក្នុង array យើងហើយ
+    // const cars = ["BMW", "Ford", "Mercedes", "Ford"];
+    // const myCar = cars.reduce((acc,item) => {
+    //   if(!acc.includes(item)){  // ប្រសិនបើមិនមានitemក្នុង array វានឹងយក Item ក្នុង array ទៅកាន់ acc 
+    //     acc.push(item);
+    //   }
+    //   return acc;
+    // }, []);
+
+    const cars = ["BMW", "Ford", "Mercedes", "Ford"];
+    // Set() method didn't show the value that hvae the same value
+    const setList = new Set(cars)
+    // setlist.add("Toyota") // add new item
+    // setlist.delete("Toyota") // delete item
+    // setList.clear(); // clear all the items
+    //const checkCar = setList.has("Ford") // check the item list 
+
+    console.log(setList)
+    
+  </script>
+</body>
+</html>

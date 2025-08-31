@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+  <script>
+    // .call(obj, "parameter", "string")
+    // .apply(obj, ["string", "string"]) array
+    // .bind(obj, "string", "string") need to function for return like const print = printName.bind((obj, "string", "string")
+
+    function printName (greeting, sign){
+      console.log(`${greeting} ${this.name}${sign}`)
+    }
+
+    // 1. Call()
+    const person1 = {name: "dara"};
+    const person2 = {name: "sok"};
+    printName.call(person1, "Hello", "!")
+
+
+    // 2. apply() ក្ដោបវាជា array
+    printName.apply(person2, ["Hello", "!"])
+
+    // 3. bind return as function
+    const print = printName.bind(person1, "Hello", "!");
+    print();
+  </script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1 id="rest"></h1>
+    <h1 id="spreed"></h1>
+
+    <script>
+      // ES6------------------------------------
+      // const friends = ["Sok", "Dara", "Socheat"];
+      // const oldFriends = ["Nang", "Chetra"];
+      // const bestFriends = ["Pitu", "Oukdom"];
+
+      // const [f1, f2, ...rest] = [
+      //   ...friends, 
+      //   ...oldFriends, 
+      //   ...bestFriends]
+      // spreed មានន័យថាវាពន្លារ  array of any element ពន្លារទៅជា single element
+
+      // spreed operator in the function use in function agurment 
+      // rest operator in the function use as function parameter
+      // const spreedDemo = document.querySelector("#rest");
+
+      // console.log(f1, f2, rest)
+
+      const totalNumber = (n1, n2, ...numbers) => {
+        let result = n1 + n2;
+        result += numbers.reduce((total, num) => total + num, 0)
+        return result;
+      }
+
+      const numbers = [20, 60, 15];
+      const result = totalNumber(5, 10, ...numbers)
+      console.log(result)
+
+
+    
+
+    </script>
+  </body>
+</html>

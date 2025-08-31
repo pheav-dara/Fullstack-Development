@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chaining Method</title>
+</head>
+<body>
+  <script>
+    // ប្រសិនបើចង់ប្រើ chaining method យើងត្រូវ return this;
+    class BankAccount {
+      constructor(name, initialBalance){
+        this.name = name;
+        this.balance = initialBalance;
+        this.bank = "ABA";
+      }
+      deposit(amount){
+        this.balance += amount
+        return this; // return this for using chaining method
+      }
+      withDrawal(amount){
+        this.balance -= amount;
+        return this; // return this for using chaining method
+      }
+    }
+    const user1 = new BankAccount("Dara", 2000);
+
+    // deposit
+    user1.deposit(100).withDrawal(2100) // using chaining method
+    console.log(user1)
+  </script>
+</body>
+</html>

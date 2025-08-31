@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+
+  <script>
+    // Sync vs Asyn code ------------------------------------
+    // syncronose code it run by step if it on the top it will run first and then run the bottom
+    console.log("ONE");
+    console.log("TWO");
+
+    print ();
+
+    console.log("LAST");
+    function print(){
+      for (let i = 0; i < 1000; i++){
+        console.log(i);
+      }
+    }
+  </script>
+</body>
+</html>

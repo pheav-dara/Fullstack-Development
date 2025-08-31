@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+  <div class="container">
+    
+  </div>
+  <script>
+    // Storage Browser API ----------------------------
+    // 1. localStorage.setItem("key", "value");
+    // 2. localStorage.getItem("key") : ទាញយកទិន្នន័យ
+    // 3. localStorage.removeItem("key"); លុបតែមួយ
+    // 4. localStoarage.clear(); លុបទាំងអស់
+    const container = document.querySelector(".container");
+    
+    // Store values in localStorage
+    localStorage.setItem("name", "Pheav Dara");
+    localStorage.setItem("address", "Phnom Penh");
+    localStorage.setItem("phone", "097832432");
+    
+    
+    // Get the value from localStorage
+    const result = localStorage.getItem("name");
+   
+    // Create a new HTML element
+    const heading = document.createElement("h1");
+    heading.textContent = `Hello, ${result}`;
+
+    // Append the new element to the container
+    container.appendChild(heading);
+
+    // clear or remove localStorage
+    localStorage.clear()
+
+
+    console.log(result);
+    
+  </script>
+</body>
+</html>

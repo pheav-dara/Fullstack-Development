@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1 id="demo"></h1>
+
+    <script>
+      const users = {
+        email: "pheavdara@gmail.com",
+        role: "Admin",
+        address: "Phnom Penh",
+      };
+
+      Object.entries(users).forEach(([key,value]) => {
+        console.log(`${key} : ${value}`);
+      });
+
+      const number = [10 ,20];
+      const [n1, n2] = number;
+      console.log(n1, n2)
+    </script>
+  </body>
+</html>

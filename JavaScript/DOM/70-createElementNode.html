@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+  <div></div>
+  <p></p>
+
+
+  <script>
+    // CREATE ELEMENT NODE ---------------
+  const div = document.querySelector('div');
+  const p = document.querySelector('p');
+  // create style for div tag
+  div.style.cssText = "width: 300px; height: 300px; background-color: red"
+
+  // set attribute
+  p.setAttribute('id', 'text')
+
+  // append div tag to the body
+  document.body.appendChild(div)
+
+  // append p tag to the div tag
+  div.appendChild(p)
+
+  // text content
+  p.textContent = 'Hello World'
+
+  // show in console
+  console.log(div)
+
+  </script>
+</body>
+</html>

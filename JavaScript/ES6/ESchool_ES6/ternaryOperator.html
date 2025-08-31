@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="demo"></div>
+
+    <script>
+      const demo = document.querySelector(".demo");
+
+      const logApp = () => {
+        demo.textContent = "Welcome App!";
+      };
+      const login = () => {
+        demo.textContent = "Welcome to login!";
+      }
+      let authenticated = false;
+
+      authenticated ? logApp() : login();
+    </script>
+  </body>
+</html>

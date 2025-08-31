@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+
+
+
+  <script>
+    // ES6 --------------------------------------
+    const phones = ["Iphone", "Nokia", "Samsung", "Pixel", "Oppo"];
+    // rest​ use for create the array that vea kbob tv ler array deh nv sol 
+    // output: Iphone, Nokia (3)  ['Samsung', 'Pixel', 'Oppo']
+    // note rest can not use the same name if we use rest above it can use rest below again
+    // const [phone1, phone2, ...rest] = phones;
+    // const people = ["Sok", "Heng", "Dara"];
+  
+    // console.log(phone1, phone2, rest)
+
+
+    const totalNumber = (...numbers) => {
+      return numbers.reduce((total, num) => total + num, 0)
+    }
+    const result = totalNumber(2, 50, 20, 40);
+    console.log(result)
+  </script>
+</body>
+</html>
