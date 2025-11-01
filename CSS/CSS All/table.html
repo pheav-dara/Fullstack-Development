@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Table</title>
+    <style>
+      /* table,
+      th,
+      td {
+        border: 1px solid;
+        text-align: center;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+      }
+      th{
+        height: 30px;
+      }
+      td{
+        height: 50px;
+        vertical-align: bottom;
+      } */
+       th, td{
+        padding: 10px;
+        text-align: left;
+        border-bottom: 1px solid #ddd;
+       }
+       table, th, td{
+        width: 100%;
+        border-collapse: collapse;
+       }
+       tr:hover{
+        background-color: coral;
+       }
+       tr:nth-child(even) {
+        background-color: #f2f2f2;
+       }
+
+    </style>
+  </head>
+  <body>
+    <h2>Add a border to a table:</h2>
+    <div style="overflow-x: auto;">
+        <table>
+            <tr>
+                <th>Firstname</th>
+                <th>Lastname</th>
+                <th>Address</th>
+            </tr>
+            <tr>
+                <td>Lois</td>
+                <td>Griffin</td>
+                <td>Phnom Penh</td>
+            </tr>
+            <tr>
+                <td>Lois</td>
+                <td>Griffin</td>
+                <td>Phnom Penh</td>
+            </tr>
+            <tr>
+                <td>Lois</td>
+                <td>Griffin</td>
+                <td>Phnom Penh</td>
+            </tr>
+            <tr>
+                <td>Lois</td>
+                <td>Griffin</td>
+                <td>Phnom Penh</td>
+            </tr>
+            <tr>
+                <td>Lois</td>
+                <td>Griffin</td>
+                <td>Phnom Penh</td>
+            </tr>
+        </div>
+    </table>
+  </body>
+</html>

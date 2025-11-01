@@ -1,0 +1,41 @@
+=> Dispaly
+The display property is the most important CSS property for controlling layout.
++ Block-level Elements
+- <div>
+- <h1> - <h6>
+- <p>
+- <form>
+- <header>
+- <footer>
+- <section>
+
++ Inline Elements
+- <span>
+- <a>
+- <img>
+
+=> Position
+The position property specifies the type of positioning method used for an element (static, relative, fixed, absolute or sticky).
+- static
+- relative
+- fixed
+- absolute => use relative for parent
+- sticky => top: 0 when scroll will the top of the web
+
+=> z-index 
+The z-index property specifies the stack order of an element.
+- z-index = 1; front 
+- z-index = -1; back
+
+=> Overflow
+The overflow property specifies whether to clip the content orr to add scroller when the content of an element is too big to fit in the specified area.
+
++The overflow property has the following values:
+- visible - Default. The overflow is not clipped. The content renders outside the element's box
+- hidden - The overflow is clipped, and the rest of the content will be invisible
+- scroll - The overflow is clipped, and a scrollbar is added to see the rest of the content
+- auto - Similar to scroll, but it adds scrollbars only when necessary
+
+=> Layout - float & clear
+The CSS float property specifies how an element should float.
+
